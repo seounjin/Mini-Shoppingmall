@@ -1,9 +1,11 @@
 import { FC } from 'react';
 import Wrapper from './styles';
+import NavBar from '../../components/NavBar';
 
 const Header: FC = () => (
   <Wrapper>
-    <h1>헤더</h1>
+    <h1>로고</h1>
+    <NavBar />
   </Wrapper>
 );
 

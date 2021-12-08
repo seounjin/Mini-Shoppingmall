@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.header`
-  position: relative;
+const Wrapper = styled.nav`
   display: flex;
-  height: 100px;
   align-items: center;
-  background-color: gray;
+  width: 100%;
 `;
 
 export default Wrapper;
