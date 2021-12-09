@@ -7,7 +7,9 @@ const Wrapper = styled.ul`
   padding: 0;
   margin: 0;
   li {
-    margin: 20px;
+    margin: 10px;
+    padding-right: 5px;
+    border-right: 1px solid;
   }
 `;
 

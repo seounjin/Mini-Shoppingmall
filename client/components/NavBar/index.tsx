@@ -5,6 +5,7 @@ import RightMenu from './RightMenu';
 const NavBar = () => (
   <Wrapper>
     <LeftMenu />
+    <RightMenu />
   </Wrapper>
 );
 

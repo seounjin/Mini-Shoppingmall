@@ -4,7 +4,10 @@ import NavBar from '../../components/NavBar';
 
 const Header: FC = () => (
   <Wrapper>
-    <h1>로고</h1>
+    <div className="logo">
+      <h1>TROUBLESHOOTER</h1>
+      <span>luxury shopping online</span>
+    </div>
     <NavBar />
   </Wrapper>
 );

@@ -5,7 +5,15 @@ const Wrapper = styled.header`
   display: flex;
   height: 100px;
   align-items: center;
-  background-color: gray;
+  border: 0.5px solid gray;
+  h1 {
+    margin: 0;
+  }
+
+  .logo {
+    margin: 0 20px 0 20px;
+    text-align: center;
+  }
 `;
 
 export default Wrapper;

@@ -20,6 +20,7 @@
     "@types/styled-components": "^5.1.16",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
+    "babel-plugin-styled-components": "^2.0.2",
     "eslint": "8.4.0",
     "eslint-config-next": "12.0.7",
     "eslint-config-prettier": "^8.3.0",
