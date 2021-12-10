@@ -14,6 +14,10 @@ const Wrapper = styled.header`
     margin: 0 20px 0 20px;
     text-align: center;
   }
+
+  @media ${({ theme }) => theme.device.laptop} {
+    display: block;
+  }
 `;
 
 export default Wrapper;

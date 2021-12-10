@@ -9,5 +9,11 @@ declare module 'styled-components' {
       gray: string;
       gray_background: string;
     };
+
+    device: {
+      mobile: string;
+      tablet: string;
+      laptop: string;
+    };
   }
 }

@@ -6,7 +6,7 @@ const LeftMenu = () => (
   <UL>
     {LEFT_MENU.map((data, index) => {
       return (
-        <li className="temp" key={index}>
+        <li key={index}>
           <Link href={data.url}>{data.title}</Link>
         </li>
       );
