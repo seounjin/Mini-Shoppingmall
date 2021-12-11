@@ -5,9 +5,21 @@ const useCarousel = () => {
 
   const slideRef = useRef(null);
 
+  const temp = () => {
+    setCurrentSlide((index) => index + 1);
+  };
+
   useEffect(() => {
     slideRef.current.style.transition = 'transform 1s';
     slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
+  }, [currentSlide]);
+
+  useEffect(() => {
+    let interval = null;
+    interval = setInterval(temp, 3000);
+    return () => {
+      clearInterval(interval);
+    };
   }, [currentSlide]);
 
   // 왼쪽

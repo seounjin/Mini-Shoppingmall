@@ -1,18 +1,21 @@
-import { Ul } from './styles';
-import useCarousel from '../../hooks/useCarousel.js';
-import React from 'react';
+import Wrapper from './styles';
+import Slide from './Slide';
+import useCarousel from '../../hooks/useCarousel';
 
 const Carousel = () => {
+  const { slideRef } = useCarousel();
   return (
-    <Ul>
-      {MAIN_IMAGE.map((data, index) => {
-        return (
-          <li key={index}>
-            <img src={data.imgUrl}></img>
-          </li>
-        );
-      })}
-    </Ul>
+    <Wrapper>
+      <ul ref={slideRef}>
+        {MAIN_IMAGE.map((data, index) => {
+          return (
+            <li key={index}>
+              <Slide imgUrl={data.imgUrl}></Slide>
+            </li>
+          );
+        })}
+      </ul>
+    </Wrapper>
   );
 };
 
@@ -21,5 +24,4 @@ const MAIN_IMAGE = [
   { imgUrl: '/img2.jpg' },
   { imgUrl: '/img3.jpg' },
 ];
-
 export default Carousel;
