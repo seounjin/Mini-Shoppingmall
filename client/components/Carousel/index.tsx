@@ -1,17 +1,18 @@
-import Wrapper from './styles';
+import { Wrapper, Li } from './styles';
 import Slide from './Slide';
 import useCarousel from '../../hooks/useCarousel';
 
 const Carousel = () => {
-  const { slideRef } = useCarousel();
+  const { currentSlide } = useCarousel();
   return (
     <Wrapper>
-      <ul ref={slideRef}>
+      <ul>
         {MAIN_IMAGE.map((data, index) => {
+          const opacity = currentSlide === index ? 1 : 0;
           return (
-            <li key={index}>
+            <Li opacity={opacity} key={index}>
               <Slide imgUrl={data.imgUrl}></Slide>
-            </li>
+            </Li>
           );
         })}
       </ul>
