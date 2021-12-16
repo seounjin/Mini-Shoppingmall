@@ -1,9 +1,11 @@
 import { Wrapper, Li } from './styles';
 import Slide from './Slide';
+import Pagination from './Pagination';
 import useCarousel from '../../hooks/useCarousel';
+import { imgUrl } from './types';
 
 const Carousel = () => {
-  const { currentSlide } = useCarousel();
+  const { currentSlide, setCurrentSlide } = useCarousel();
   return (
     <Wrapper>
       <ul>
@@ -16,11 +18,16 @@ const Carousel = () => {
           );
         })}
       </ul>
+      <Pagination
+        imgData={MAIN_IMAGE}
+        currentSlide={currentSlide}
+        setCurrentSlide={setCurrentSlide}
+      ></Pagination>
     </Wrapper>
   );
 };
 
-const MAIN_IMAGE = [
+const MAIN_IMAGE: imgUrl[] = [
   { imgUrl: '/img1.jpg' },
   { imgUrl: '/img2.jpg' },
   { imgUrl: '/img3.jpg' },

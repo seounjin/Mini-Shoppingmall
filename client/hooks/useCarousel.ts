@@ -1,6 +1,11 @@
-import { useState, useEffect } from 'react';
+import { Dispatch, SetStateAction, useState, useEffect } from 'react';
 
-const useCarousel = () => {
+type ReturnTypes = {
+  currentSlide: number;
+  setCurrentSlide: Dispatch<SetStateAction<number>>;
+};
+
+const useCarousel = (): ReturnTypes => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const play = () => {
@@ -25,7 +30,7 @@ const useCarousel = () => {
     setCurrentSlide(currentSlide + 1);
   };
 
-  return { prevSlide, nextSlide, currentSlide };
+  return { currentSlide, setCurrentSlide };
 };
 
 export default useCarousel;
